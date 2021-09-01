@@ -4,7 +4,7 @@ const Orders = ({ username, orders }) => {
   return (
     <div className='orders'>
       <div className='orders-header'>
-        <div className='order-title'>{`${
+        <div data-testid='user-title' className='order-title'>{`${
           username.split(' ')[0]
         }'s Orders`}</div>
         <div className='help-container'>
@@ -49,10 +49,12 @@ const Orders = ({ username, orders }) => {
                           />
                         </div>
                       ) : null}
-                      <h5>{order.order_status}</h5>
+                      <h5 data-testid='order-status'>{order.order_status}</h5>
                     </div>
                     <div className='order-num'>
-                      <div className='number'>{order.order_number}</div>
+                      <div data-testid='order-number' className='number'>
+                        {order.order_number}
+                      </div>
                       <img
                         style={{ marginLeft: '5px' }}
                         alt=''
@@ -62,7 +64,9 @@ const Orders = ({ username, orders }) => {
                   </div>
                 </td>
 
-                <td className='date'>{order.createdAt}</td>
+                <td data-testid='order-created' className='date'>
+                  {order.createdAt}
+                </td>
                 <td>
                   <div className='store'>
                     <img
@@ -70,7 +74,7 @@ const Orders = ({ username, orders }) => {
                       src={'assets/swe.svg'}
                       alt=''
                     />
-                    <h5>{order.store}</h5>
+                    <h5 data-testid='order-store'>{order.store}</h5>
                   </div>
                 </td>
                 <td>
@@ -78,7 +82,9 @@ const Orders = ({ username, orders }) => {
                     <div className='service-box'>
                       <img src={order.payment_asset} alt='' />
                     </div>
-                    <div className='method'>{order.payment_method}</div>
+                    <div data-testid='payment-method' className='method'>
+                      {order.payment_method}
+                    </div>
                   </div>
                 </td>
                 <td>
@@ -92,10 +98,12 @@ const Orders = ({ username, orders }) => {
                           : 'circle failed'
                       }
                     ></span>
-                    <h5>{order.payment_status}</h5>
+                    <h5 data-testid='payment-status'>{order.payment_status}</h5>
                   </div>
                 </td>
-                <td className='amount'>{order.amount}</td>
+                <td data-testid='payment-amount' className='amount'>
+                  {order.amount}
+                </td>
               </tr>
             ))}
           </tbody>

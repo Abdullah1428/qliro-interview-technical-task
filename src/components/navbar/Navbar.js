@@ -2,8 +2,11 @@ import './navbar.scss'
 
 const Navbar = ({ username, userPersonalNumber }) => {
   return (
-    <div className='navbar'>
-      <div className='customer-title'>{`${username} (${userPersonalNumber})`}</div>
+    <div data-testid='navbar' className='navbar'>
+      <div
+        data-testid='customer-title'
+        className='customer-title'
+      >{`${username} (${userPersonalNumber})`}</div>
     </div>
   )
 }

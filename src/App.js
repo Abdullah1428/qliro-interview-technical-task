@@ -26,6 +26,15 @@ function App() {
     dispatch(listOrders())
   }, [dispatch])
 
+  const pages = [
+    {
+      id: '1'
+    },
+    {
+      id: '2'
+    }
+  ]
+
   return (
     <div className='app'>
       {userLoading || loading ? (
@@ -45,7 +54,7 @@ function App() {
           <div className='sections'>
             <Details user={user} />
             <Orders username={user.name} orders={orders} />
-            <Pagination />
+            <Pagination pages={pages} />
           </div>
         </div>
       )}

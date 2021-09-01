@@ -2,17 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import './pagination.scss'
 
-const Pagination = () => {
+const Pagination = ({ pages }) => {
   const [select, setSelect] = useState('1')
-
-  const pages = [
-    {
-      id: '1'
-    },
-    {
-      id: '2'
-    }
-  ]
 
   useEffect(() => {
     switch (select) {
@@ -44,7 +35,9 @@ const Pagination = () => {
               onClick={() => setSelect(page.id)}
               className={select === page.id ? 'page active' : 'page'}
             >
-              <p style={{ alignSelf: 'center' }}>{page.id}</p>
+              <p data-testid='page-number' style={{ alignSelf: 'center' }}>
+                {page.id}
+              </p>
             </li>
           ))}
         </ul>
