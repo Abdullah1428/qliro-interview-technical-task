@@ -1,0 +1,60 @@
+@import '../../global/config.scss';
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 60px;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
+
+  .container {
+    align-self: center;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+
+    .back,
+    .next {
+      background: none;
+      border: none;
+      align-self: center;
+      color: $medium-grey;
+      font-size: 14;
+      font-weight: 600;
+      cursor: pointer;
+
+      &.active {
+        color: $forest-green;
+      }
+    }
+
+    ul {
+      margin: 10px;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .page {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+
+      &.active {
+        background-color: $forest-green;
+        color: white;
+      }
+
+      h5 {
+        font-size: 14px;
+        align-self: center;
+      }
+    }
+  }
+}

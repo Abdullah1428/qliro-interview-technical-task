@@ -1,0 +1,13 @@
+@import './global/config';
+
+.app {
+  height: 100vh;
+  background-color: #ffffff;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 88px);
+    top: 88px;
+    background-color: $page-background-color;
+  }
+}

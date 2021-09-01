@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Anna Anne",
+      "personal_number": "19901230-4567",
+      "email": "annaanne@gmail.com",
+      "contact": "+46721234567",
+      "shipping_address": "Qlirovägen 123, 12345 Stockholm, Sweden",
+      "invoice_address": "Qlirovägen 123, 12345 Stockholm, Sweden"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "order_number": "123456789",
+      "order_status": "Online",
+      "createdAt": "1st Sep, 8:00",
+      "store": "Bultik X",
+      "payment_method": "Invoice",
+      "payment_asset": "assets/qliro.svg",
+      "payment_status": "Paid",
+      "amount": "2160 kr",
+      "user_id": "1"
+    },
+    {
+      "id": "2",
+      "order_number": "123456789",
+      "order_status": "Instore",
+      "createdAt": "26 Aug, 10:00",
+      "store": "Bultik X",
+      "payment_method": "Card, **** 1234",
+      "payment_asset": "assets/visa.svg",
+      "payment_status": "In progress",
+      "amount": "3890 kr",
+      "user_id": "1"
+    },
+    {
+      "id": "3",
+      "order_number": "123456789",
+      "order_status": "Manual",
+      "createdAt": "27 Aug, 8:00",
+      "store": "Bultik X",
+      "payment_method": "Card, **** 1234",
+      "payment_asset": "assets/americaexpress.svg",
+      "payment_status": "Failed",
+      "amount": "1134 kr",
+      "user_id": "1"
+    },
+    {
+      "id": "4",
+      "order_number": "123456789",
+      "order_status": "Online",
+      "createdAt": "10 Aug, 8:00",
+      "store": "Bultik X",
+      "payment_method": "Paypal",
+      "payment_asset": "assets/paypal.svg",
+      "payment_status": "In progress",
+      "amount": "567 kr",
+      "flagged": true,
+      "user_id": "1"
+    },
+    {
+      "id": "5",
+      "order_number": "123456789",
+      "order_status": "Instore",
+      "createdAt": "11 Aug, 8:00",
+      "store": "Bultik X",
+      "payment_method": "Trustly",
+      "payment_asset": "assets/trustly.svg",
+      "payment_status": "Paid",
+      "amount": "8970 kr",
+      "user_id": "1"
+    }
+  ]
+}

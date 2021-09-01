@@ -1,0 +1,226 @@
+@import '../../global/config';
+
+.orders {
+  height: 400px;
+  width: 100%;
+  background-color: $page-background-color;
+
+  .orders-header {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    height: 30px;
+
+    .order-title {
+      margin-left: 70px;
+      font-weight: 600;
+      font-size: $title-font-size;
+      color: $almost-black;
+    }
+
+    .help-container {
+      display: flex;
+      justify-content: space-around;
+
+      .help-circle {
+        height: 16px;
+        width: 16px;
+        background-color: $light-grey;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .help {
+        font-size: 14px;
+        color: $forest-green;
+        margin-left: 5px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .orders-table {
+    display: flex;
+    justify-content: center;
+
+    .content-table {
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      margin: 25px 0;
+      font-size: 14px;
+      min-width: 90%;
+      overflow: hidden;
+
+      thead {
+        tr {
+          color: $medium-grey;
+          font-weight: 500;
+          text-align: left;
+        }
+
+        th:first-child {
+          text-align: center;
+        }
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+
+        // first column
+        .order-info {
+          display: flex;
+          justify-content: space-around;
+          position: relative;
+
+          .order-status {
+            position: absolute;
+            margin-right: 180px;
+            margin-top: -7px;
+            height: 30px;
+            width: 55px;
+            border-radius: 5px;
+            background-color: $light-grey;
+            transform: rotate(-90deg);
+            display: flex;
+            justify-content: center;
+
+            &.instore {
+              background-color: #000000;
+              color: #fff;
+            }
+
+            &.manual {
+              background-color: $inprogress-color;
+              color: #fff;
+            }
+
+            .flag {
+              position: absolute;
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              background-color: white;
+              border: 1px solid $light-grey;
+              margin-top: 22px;
+              display: flex;
+              justify-content: center;
+
+              .upsell {
+                transform: rotate(90deg);
+                height: 15px;
+                width: 15px;
+                align-self: center;
+              }
+            }
+
+            h5 {
+              align-self: center;
+              font-size: 12px;
+              font-weight: 300;
+            }
+          }
+        }
+
+        .order-num {
+          display: flex;
+          color: $light-theme-green;
+          justify-content: space-around;
+
+          .number {
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+
+            img {
+              cursor: pointer;
+            }
+          }
+        }
+
+        // second column
+        .date {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        // third column
+        .store {
+          display: flex;
+          align-content: center;
+
+          h5 {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        // fourth column
+        .payment-method {
+          display: flex;
+
+          .service-box {
+            height: 24px;
+            width: 45px;
+            border: 1px solid $light-grey;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+          }
+          .method {
+            margin-left: 5px;
+            align-self: center;
+          }
+        }
+
+        // fifth column
+        .payment-status {
+          display: flex;
+
+          .circle {
+            align-self: center;
+            height: 8px;
+            width: 8px;
+            background-color: $paid-color;
+            border-radius: 50%;
+
+            &.inprogress {
+              background-color: $inprogress-color;
+            }
+
+            &.failed {
+              background-color: $failed-color;
+            }
+          }
+
+          h5 {
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      th:first-child,
+      td:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      th:last-child,
+      td:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+
+      tbody {
+        tr {
+          height: 60px;
+          background-color: #fff;
+          border: 1px solid $light-grey;
+          box-sizing: border-box;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
